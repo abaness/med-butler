@@ -17,7 +17,7 @@ export default function Medicine() {
           <h1 className="text-lg font-semibold">我的药箱</h1>
           <button
             onClick={() => nav('/medicine/add')}
-            className="bg-brand-600 text-white rounded-full px-3 py-1.5 text-sm flex items-center gap-1 active:scale-95"
+            className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-full px-3 py-1.5 text-sm font-semibold flex items-center gap-1 active:scale-95"
           >
             <Plus size={16} /> 添加
           </button>

@@ -73,13 +73,18 @@ b, strong { font-weight: 700; }
 .elder-mode .text-2xl      { font-size: 28px; }  /* 24 → 28 */
 .elder-mode .text-3xl      { font-size: 34px; }  /* 30 → 34 */
 
-/* 仅主操作按钮加大；不再用 .elder-mode button{...} 全局规则
-   （之前那条规则把 Switch、Tab、头像按钮全撑变形了）*/
-.elder-mode .btn-primary,
-.elder-mode button.bg-brand-600 {
+/* 仅主操作按钮加大；用 .btn-primary 显式标识，避免误伤 Switch/小图标按钮 */
+.elder-mode .btn-primary {
   min-height: 52px;
   font-weight: 700;
   letter-spacing: 0.5px;
+}
+
+/* 切换开关豁免：保持 44×24 横向 toggle 形态 */
+.elder-mode .toggle-switch {
+  min-height: 24px !important;
+  height: 24px !important;
+  width: 44px !important;
 }
 
 /* 关键加粗：标题、b、strong */

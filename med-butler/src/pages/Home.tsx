@@ -64,26 +64,26 @@ export default function Home() {
 
   return (
     <div className="pb-4">
-      {/* 顶部 Hero */}
-      <div className="relative bg-gradient-to-br from-brand-500 via-brand-600 to-orange-500 text-white px-4 pt-6 pb-14">
+      {/* 顶部 Hero · 美团黄系渐变 */}
+      <div className="relative bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 px-4 pt-6 pb-14">
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-xs opacity-90">美团 · 慢病用药小管家</div>
-            <div className="text-lg font-semibold mt-0.5">
+            <div className="text-xs text-gray-700">美团 · 慢病用药小管家</div>
+            <div className="text-lg font-bold mt-0.5">
               {getGreeting(me?.name.replace('（本人）', '') ?? '您好')}
             </div>
           </div>
           <button
             onClick={() => nav('/me')}
-            className="w-10 h-10 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-xl"
+            className="w-10 h-10 rounded-full bg-white/70 backdrop-blur flex items-center justify-center text-xl shadow-sm"
             aria-label="切换家人"
           >
             {me?.avatar}
           </button>
         </div>
-        <div className="mt-4 flex items-center gap-3 text-sm">
+        <div className="mt-4 flex items-center gap-3 text-sm text-gray-800">
           <Bell size={16} />
-          <span className="opacity-95">
+          <span>
             {lowStock.length > 0
               ? elderMode
                 ? `${lowStock[0].name} 仅剩 ${lowStock[0].stockDays} 天用量`
@@ -113,7 +113,7 @@ export default function Home() {
                   cy="18"
                   r="16"
                   fill="none"
-                  stroke="#ff8000"
+                  stroke="#FFC500"
                   strokeWidth="4"
                   strokeDasharray={`${(progress / 100) * 100.53} 100.53`}
                   strokeLinecap="round"
@@ -173,7 +173,7 @@ export default function Home() {
           <div className="bg-gradient-to-br from-brand-50 to-white rounded-2xl p-4 border border-brand-100 relative overflow-hidden">
             <div className="absolute -right-6 -top-6 w-24 h-24 bg-brand-100 rounded-full opacity-50" />
             <div className="relative">
-              <div className="flex items-center gap-2 text-brand-700 text-sm font-medium">
+              <div className="flex items-center gap-2 text-brand-600 text-sm font-medium">
                 <Sparkles size={16} /> AI 管家 · 智能提示
               </div>
               <p className="mt-2 text-sm text-gray-700 leading-relaxed">
@@ -183,13 +183,13 @@ export default function Home() {
               <div className="mt-3 flex gap-2">
                 <button
                   onClick={() => nav('/services/refill')}
-                  className="flex-1 bg-brand-600 text-white py-2 rounded-xl text-sm font-medium active:scale-95"
+                  className="flex-1 bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 py-2 rounded-xl text-sm font-medium active:scale-95"
                 >
                   立即续方 ¥38
                 </button>
                 <button
                   onClick={() => nav('/chat')}
-                  className="px-4 bg-white border border-brand-200 text-brand-700 py-2 rounded-xl text-sm active:scale-95"
+                  className="px-4 bg-white border border-brand-200 text-brand-600 py-2 rounded-xl text-sm active:scale-95"
                 >
                   问问管家
                 </button>
@@ -204,7 +204,7 @@ export default function Home() {
         <div className="px-4 mt-4">
           <button
             onClick={() => nav('/services/refill')}
-            className="w-full bg-brand-600 text-white rounded-2xl px-4 py-4 flex items-center justify-between active:scale-[0.98]"
+            className="w-full bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-2xl px-4 py-4 flex items-center justify-between active:scale-[0.98]"
           >
             <div className="text-left">
               <div className="text-base font-bold">药快用完了，点此续方</div>
@@ -409,7 +409,7 @@ function DoseItem({
           <button
             onClick={() => onMark('taken')}
             className={cx(
-              'bg-brand-600 text-white rounded-full font-medium active:scale-95',
+              'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-full font-bold active:scale-95',
               elderMode ? 'text-base px-5 py-2.5' : 'text-xs px-3 py-1.5',
             )}
           >

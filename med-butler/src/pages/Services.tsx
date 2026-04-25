@@ -20,9 +20,9 @@ export default function Services() {
 
   return (
     <div className="pb-4">
-      <div className="bg-gradient-to-br from-brand-500 via-brand-600 to-orange-500 text-white px-4 pt-5 pb-10">
-        <h1 className="text-lg font-semibold">健康服务</h1>
-        <div className="mt-1 text-xs opacity-90">美团医药 · 闭环服务，省心省事</div>
+      <div className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 px-4 pt-5 pb-10">
+        <h1 className="text-lg font-bold">健康服务</h1>
+        <div className="mt-1 text-xs text-gray-700">美团医药 · 闭环服务，省心省事</div>
       </div>
 
       {/* 主推续方 */}
@@ -38,7 +38,7 @@ export default function Services() {
             <div className="flex-1">
               <div className="text-base font-semibold flex items-center gap-2">
                 一键续方
-                <span className="text-[10px] bg-brand-600 text-white px-1.5 py-0.5 rounded-full">
+                <span className="text-[10px] bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold px-1.5 py-0.5 rounded-full">
                   <Truck size={10} className="inline mr-0.5" /> 30 分钟达
                 </span>
               </div>

@@ -168,7 +168,7 @@ export default function MedicineAdd() {
                     className={cx(
                       'px-3 py-1.5 rounded-full text-xs flex items-center gap-1 transition',
                       active
-                        ? 'bg-brand-600 text-white'
+                        ? 'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold'
                         : 'bg-gray-100 text-gray-600',
                     )}
                   >
@@ -185,7 +185,7 @@ export default function MedicineAdd() {
           <div className="mt-4">
             <button
               onClick={confirmAdd}
-              className="w-full bg-brand-600 text-white rounded-2xl py-3 text-sm font-medium active:scale-95"
+              className="w-full bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-2xl py-3 text-sm font-bold active:scale-95"
             >
               确认加入药箱，开始提醒
             </button>
@@ -226,7 +226,7 @@ export default function MedicineAdd() {
       <div className="pb-4">
         <PageHeader title="从美团订单导入" onBack={() => setMode('choose')} />
         <div className="px-4 pt-4">
-          <div className="bg-brand-50 border border-brand-100 rounded-2xl p-3 text-sm text-brand-700 flex items-center gap-2">
+          <div className="bg-brand-50 border border-brand-100 rounded-2xl p-3 text-sm text-brand-600 flex items-center gap-2">
             <Sparkles size={16} /> 从您的美团买药订单中一键导入，无需手动录入
           </div>
           <div className="mt-3 space-y-3">
@@ -261,7 +261,7 @@ export default function MedicineAdd() {
                       'text-sm px-3 py-1.5 rounded-full',
                       o.imported
                         ? 'bg-gray-100 text-gray-400'
-                        : 'bg-brand-600 text-white active:scale-95',
+                        : 'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold active:scale-95',
                     )}
                   >
                     {o.imported ? '已导入' : '一键导入'}
@@ -302,7 +302,7 @@ export default function MedicineAdd() {
           </FormRow>
           <button
             onClick={startManual}
-            className="w-full bg-brand-600 text-white rounded-2xl py-3 text-sm font-medium active:scale-95 mt-2"
+            className="w-full bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-2xl py-3 text-sm font-bold active:scale-95 mt-2"
           >
             下一步：设置提醒
           </button>
@@ -316,11 +316,11 @@ export default function MedicineAdd() {
     <div className="pb-4">
       <PageHeader title="添加药品" />
       <div className="px-4 pt-4">
-        <div className="bg-gradient-to-br from-brand-500 to-orange-500 text-white rounded-2xl p-4">
-          <div className="flex items-center gap-2 text-sm">
+        <div className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-2xl p-4">
+          <div className="flex items-center gap-2 text-sm font-semibold">
             <Sparkles size={16} /> AI 智能添加，最快 3 秒完成
           </div>
-          <div className="mt-2 text-xs opacity-90 leading-relaxed">
+          <div className="mt-2 text-xs text-gray-700 leading-relaxed">
             推荐使用"美团订单导入"—订单即计划，零录入门槛；无订单时可拍照识别药盒
           </div>
         </div>
@@ -393,7 +393,7 @@ function Option({
         <div className="flex items-center gap-1.5">
           <span className="text-sm font-medium">{title}</span>
           {badge && (
-            <span className="text-[10px] bg-brand-600 text-white px-1.5 py-0.5 rounded-full">
+            <span className="text-[10px] bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold px-1.5 py-0.5 rounded-full">
               {badge}
             </span>
           )}

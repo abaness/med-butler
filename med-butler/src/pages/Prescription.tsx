@@ -14,15 +14,15 @@ export default function Prescription() {
             key={p.id}
             className="bg-white rounded-2xl shadow-card overflow-hidden"
           >
-            <div className="bg-gradient-to-br from-brand-500 to-orange-500 text-white px-4 py-3 flex items-start justify-between">
+            <div className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 px-4 py-3 flex items-start justify-between">
               <div>
                 <div className="flex items-center gap-2">
                   <FileText size={18} />
-                  <span className="text-sm font-semibold">电子处方（RP）</span>
+                  <span className="text-sm font-bold">电子处方（RP）</span>
                 </div>
-                <div className="text-xs opacity-90 mt-1">{p.hospital}</div>
+                <div className="text-xs text-gray-700 mt-1">{p.hospital}</div>
               </div>
-              <div className="text-right text-[10px] bg-white/20 rounded-md px-2 py-1">
+              <div className="text-right text-[10px] bg-white/70 rounded-md px-2 py-1 text-gray-800 shadow-sm">
                 有效至 {p.expireAt}
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Prescription() {
                 <button className="bg-gray-50 rounded-xl py-2 text-sm flex items-center justify-center gap-1">
                   <Download size={14} /> 下载 PDF
                 </button>
-                <button className="bg-brand-600 text-white rounded-xl py-2 text-sm flex items-center justify-center gap-1 active:scale-95">
+                <button className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold rounded-xl py-2 text-sm flex items-center justify-center gap-1 active:scale-95">
                   <QrCode size={14} /> 扫码取药
                 </button>
               </div>

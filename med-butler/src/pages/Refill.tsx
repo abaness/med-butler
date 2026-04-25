@@ -40,7 +40,7 @@ export default function Refill() {
             骑手已接单，预计 <b className="text-brand-600">28 分钟</b>送达
           </div>
           <div className="mt-6 w-full bg-gradient-to-br from-brand-50 to-white border border-brand-100 rounded-2xl p-4">
-            <div className="flex items-center gap-2 text-sm font-medium text-brand-700">
+            <div className="flex items-center gap-2 text-sm font-medium text-brand-600">
               <Sparkles size={16} /> AI 管家已为您
             </div>
             <ul className="mt-2 space-y-1 text-xs text-gray-600 leading-relaxed">
@@ -51,7 +51,7 @@ export default function Refill() {
           </div>
           <button
             onClick={() => nav('/')}
-            className="mt-6 w-full bg-brand-600 text-white rounded-2xl py-3 text-sm font-medium"
+            className="mt-6 w-full bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-2xl py-3 text-sm font-bold"
           >
             返回首页
           </button>
@@ -76,7 +76,7 @@ export default function Refill() {
 
       {step === 'select' && (
         <div className="px-4 space-y-3">
-          <div className="bg-brand-50 rounded-2xl p-3 border border-brand-100 text-sm text-brand-700 flex items-center gap-2">
+          <div className="bg-brand-50 rounded-2xl p-3 border border-brand-100 text-sm text-brand-600 flex items-center gap-2">
             <Sparkles size={16} /> AI 已根据库存和处方为您勾选需续方的药品
           </div>
           <div className="space-y-2">
@@ -120,10 +120,10 @@ export default function Refill() {
             disabled={selected.length === 0}
             onClick={() => setStep('prescreen')}
             className={cx(
-              'w-full rounded-2xl py-3 text-sm font-medium mt-2',
+              'w-full rounded-2xl py-3 text-sm font-bold mt-2',
               selected.length === 0
                 ? 'bg-gray-200 text-gray-400'
-                : 'bg-brand-600 text-white active:scale-95',
+                : 'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 active:scale-95',
             )}
           >
             下一步（已选 {selected.length} 项）
@@ -164,7 +164,7 @@ export default function Refill() {
 
           <button
             onClick={() => setStep('confirm')}
-            className="w-full bg-brand-600 text-white rounded-2xl py-3 text-sm font-medium active:scale-95"
+            className="w-full bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-2xl py-3 text-sm font-bold active:scale-95"
           >
             下一步：确认订单
           </button>
@@ -249,7 +249,7 @@ export default function Refill() {
             </div>
             <button
               onClick={() => setStep('success')}
-              className="bg-brand-600 text-white rounded-full px-6 py-3 text-sm font-medium active:scale-95 flex items-center gap-1"
+              className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-full px-6 py-3 text-sm font-bold active:scale-95 flex items-center gap-1"
             >
               <Truck size={16} /> 提交订单
             </button>
@@ -288,7 +288,7 @@ function Question({ q, options, default_ }: { q: string; options: string[]; defa
             onClick={() => setV(o)}
             className={cx(
               'px-3 py-1.5 rounded-full text-xs',
-              v === o ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-600',
+              v === o ? 'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold' : 'bg-gray-100 text-gray-600',
             )}
           >
             {o}

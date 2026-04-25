@@ -24,7 +24,7 @@ export default function Family() {
         right={
           <button
             onClick={() => setShowInvite(true)}
-            className="bg-brand-600 text-white rounded-full px-3 py-1.5 text-xs flex items-center gap-1 active:scale-95"
+            className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-full px-3 py-1.5 text-xs font-semibold flex items-center gap-1 active:scale-95"
           >
             <UserPlus size={14} /> 邀请
           </button>
@@ -59,7 +59,7 @@ export default function Family() {
               )}
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-orange-100 flex items-center justify-center text-2xl">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center text-2xl">
                   {f.avatar}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -124,7 +124,7 @@ export default function Family() {
         {/* AI 管家洞察 · 仅标准模式（主要面向子女视角的分析性内容） */}
         {!elderMode && (
           <div className="mt-4 bg-gradient-to-br from-brand-50 to-white border border-brand-100 rounded-2xl p-4">
-            <div className="flex items-center gap-1.5 text-sm font-medium text-brand-700">
+            <div className="flex items-center gap-1.5 text-sm font-medium text-brand-600">
               <Sparkles size={16} /> AI 管家洞察
             </div>
             <ul className="mt-2 space-y-1.5 text-xs text-gray-600 leading-relaxed">
@@ -167,12 +167,12 @@ function InviteSheet({ onClose }: { onClose: () => void }) {
         <div className="mt-1 text-xs text-gray-500 text-center">
           发送专属邀请码，成为彼此的健康守护者
         </div>
-        <div className="mt-5 bg-gradient-to-br from-brand-500 to-orange-500 rounded-2xl p-5 text-white text-center">
-          <div className="text-xs opacity-90">邀请码</div>
+        <div className="mt-5 bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 rounded-2xl p-5 text-gray-900 text-center">
+          <div className="text-xs text-gray-700">邀请码</div>
           <div className="mt-1 text-3xl font-bold tracking-widest">MTX-3829</div>
-          <div className="mt-2 text-xs opacity-90">3 天内有效</div>
+          <div className="mt-2 text-xs text-gray-700">3 天内有效</div>
         </div>
-        <button className="mt-4 w-full bg-brand-600 text-white rounded-xl py-3 text-sm font-medium flex items-center justify-center gap-1">
+        <button className="mt-4 w-full bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-xl py-3 text-sm font-bold flex items-center justify-center gap-1">
           <Share2 size={16} /> 分享给家人
         </button>
         <button onClick={onClose} className="mt-2 w-full py-3 text-gray-400 text-sm">

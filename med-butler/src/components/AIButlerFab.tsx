@@ -6,7 +6,7 @@ export default function AIButlerFab() {
   return (
     <button
       onClick={() => nav('/chat')}
-      className="fixed bottom-24 right-[max(16px,calc((100%-440px)/2+16px))] z-30 bg-gradient-to-br from-brand-500 to-brand-600 text-white rounded-full shadow-pop w-14 h-14 flex items-center justify-center pulse-ring"
+      className="fixed bottom-24 right-[max(16px,calc((100%-440px)/2+16px))] z-30 bg-gradient-to-br from-brand-400 to-brand-500 text-gray-900 rounded-full shadow-pop w-14 h-14 flex items-center justify-center pulse-ring"
       aria-label="唤起 AI 管家"
     >
       <Sparkles size={24} />

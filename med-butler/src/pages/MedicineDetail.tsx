@@ -73,7 +73,7 @@ export default function MedicineDetail() {
             </div>
             <button
               onClick={() => nav('/services/refill')}
-              className="bg-brand-600 text-white text-sm px-4 py-2 rounded-full flex items-center gap-1 active:scale-95"
+              className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold text-sm px-4 py-2 rounded-full flex items-center gap-1 active:scale-95"
             >
               <ShoppingBag size={16} /> 续方
             </button>
@@ -88,7 +88,7 @@ export default function MedicineDetail() {
               {sc.map((s) => (
                 <span
                   key={s.id}
-                  className="text-xs bg-brand-50 text-brand-700 px-2.5 py-1 rounded-full flex items-center gap-1"
+                  className="text-xs bg-brand-50 text-brand-600 px-2.5 py-1 rounded-full flex items-center gap-1"
                 >
                   <Clock size={12} /> {s.time}
                 </span>

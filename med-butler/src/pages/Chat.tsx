@@ -64,7 +64,7 @@ export default function Chat() {
         <button onClick={() => nav(-1)} className="p-1 rounded-full hover:bg-gray-100">
           <ArrowLeft size={22} />
         </button>
-        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-500 to-orange-500 text-white flex items-center justify-center">
+        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-400 to-brand-500 text-gray-900 flex items-center justify-center">
           <Sparkles size={18} />
         </div>
         <div className="flex-1 min-w-0">
@@ -82,7 +82,7 @@ export default function Chat() {
         ))}
         {typing && (
           <div className="flex items-end gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-500 to-orange-500 text-white flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-brand-400 to-brand-500 text-gray-900 flex items-center justify-center shrink-0">
               <Sparkles size={14} />
             </div>
             <div className="bg-white shadow-card rounded-2xl rounded-tl-sm px-3 py-2 text-sm text-gray-400 flex items-center gap-1">
@@ -110,7 +110,7 @@ export default function Chat() {
             onClick={() => send(input)}
             className={cx(
               'w-8 h-8 rounded-full flex items-center justify-center',
-              input.trim() ? 'bg-brand-600 text-white' : 'bg-gray-200 text-gray-400',
+              input.trim() ? 'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900' : 'bg-gray-200 text-gray-400',
             )}
           >
             <Send size={16} />
@@ -140,8 +140,8 @@ function MessageBubble({
         className={cx(
           'w-8 h-8 rounded-full flex items-center justify-center shrink-0',
           isUser
-            ? 'bg-brand-100 text-brand-700'
-            : 'bg-gradient-to-br from-brand-500 to-orange-500 text-white',
+            ? 'bg-brand-100 text-brand-600'
+            : 'bg-gradient-to-br from-brand-400 to-brand-500 text-gray-900',
         )}
       >
         {isUser ? '我' : <Sparkles size={14} />}
@@ -151,7 +151,7 @@ function MessageBubble({
           className={cx(
             'px-3 py-2 text-sm leading-relaxed whitespace-pre-wrap',
             isUser
-              ? 'bg-brand-600 text-white rounded-2xl rounded-br-sm'
+              ? 'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 rounded-2xl rounded-br-sm'
               : 'bg-white shadow-card rounded-2xl rounded-tl-sm',
           )}
         >
@@ -162,7 +162,7 @@ function MessageBubble({
             onClick={() => onCardAction(msg.card!.to)}
             className="mt-2 bg-gradient-to-br from-brand-50 to-white border border-brand-100 rounded-2xl p-3 cursor-pointer active:scale-[0.99]"
           >
-            <div className="flex items-center gap-2 text-sm font-medium text-brand-700">
+            <div className="flex items-center gap-2 text-sm font-medium text-brand-600">
               {msg.card.type === 'refill' && <Pill size={16} />}
               {msg.card.type === 'consult' && <Stethoscope size={16} />}
               {msg.card.type === 'interaction' && <Sparkles size={16} />}
@@ -170,7 +170,7 @@ function MessageBubble({
             </div>
             <div className="mt-1 text-xs text-gray-600 leading-relaxed">{msg.card.desc}</div>
             <div className="mt-2 text-right">
-              <span className="inline-flex items-center gap-1 text-xs bg-brand-600 text-white px-3 py-1.5 rounded-full">
+              <span className="inline-flex items-center gap-1 text-xs bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold px-3 py-1.5 rounded-full">
                 <ShoppingBag size={12} /> {msg.card.action}
               </span>
             </div>

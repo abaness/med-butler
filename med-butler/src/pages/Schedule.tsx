@@ -31,7 +31,7 @@ export default function Schedule() {
               onClick={() => setTab(k)}
               className={cx(
                 'flex-1 py-1.5 rounded-full transition',
-                tab === k ? 'bg-white text-brand-600 font-medium shadow' : 'text-gray-500',
+                tab === k ? 'bg-white text-brand-600 font-semibold shadow' : 'text-gray-500',
               )}
             >
               {label}
@@ -91,7 +91,7 @@ function TodayView() {
             ) : (
               <button
                 onClick={() => markDose(log.id, 'taken')}
-                className="bg-brand-600 text-white text-xs px-3 py-1.5 rounded-full font-medium active:scale-95"
+                className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 text-xs px-3 py-1.5 rounded-full font-bold active:scale-95"
               >
                 我吃了
               </button>
@@ -185,11 +185,11 @@ function MonthView() {
 
       {/* 连续打卡奖励卡 · 老人模式隐藏（营销化激励，非核心信息） */}
       {!elderMode && (
-        <div className="mt-4 bg-gradient-to-br from-brand-500 to-orange-500 rounded-2xl p-4 text-white">
-          <div className="flex items-center gap-2 text-sm">
+        <div className="mt-4 bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 rounded-2xl p-4 text-gray-900">
+          <div className="flex items-center gap-2 text-sm font-semibold">
             <Award size={18} /> 本月连续打卡 <b className="text-lg">18</b> 天
           </div>
-          <div className="mt-1 text-xs opacity-95">保持好习惯，健康自然来</div>
+          <div className="mt-1 text-xs text-gray-700">保持好习惯，健康自然来</div>
         </div>
       )}
     </div>
@@ -258,7 +258,7 @@ function ReportView() {
       )}
 
       <div className="bg-gradient-to-br from-brand-50 to-white border border-brand-100 rounded-2xl p-4">
-        <div className="flex items-center gap-1.5 text-sm font-medium text-brand-700">
+        <div className="flex items-center gap-1.5 text-sm font-medium text-brand-600">
           <Sparkles size={16} /> AI 管家 · 周报建议
         </div>
         <ul className="mt-2 space-y-1.5 text-sm text-gray-700 leading-relaxed">
@@ -270,7 +270,7 @@ function ReportView() {
 
       {/* 导出 PDF · 老人模式隐藏（面向子女/医生的分享功能） */}
       {!elderMode && (
-        <button className="w-full bg-white text-brand-700 border border-brand-200 rounded-2xl py-3 text-sm active:scale-95">
+        <button className="w-full bg-white text-brand-600 border border-brand-200 rounded-2xl py-3 text-sm active:scale-95">
           导出为 PDF 发送给家庭医生
         </button>
       )}

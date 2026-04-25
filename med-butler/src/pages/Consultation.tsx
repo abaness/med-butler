@@ -71,7 +71,7 @@ export default function Consultation() {
             {doctors.map((d, i) => (
               <div key={i} className="bg-white rounded-2xl shadow-card p-3 flex gap-3">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-orange-100 flex items-center justify-center text-2xl">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-100 to-brand-200 flex items-center justify-center text-2xl">
                     {d.avatar}
                   </div>
                   {d.online && (
@@ -94,8 +94,8 @@ export default function Consultation() {
                   </div>
                 </div>
                 <div className="flex flex-col items-end justify-between">
-                  <div className="text-brand-600 font-semibold text-sm">¥{d.price}</div>
-                  <button className="bg-brand-600 text-white text-xs px-3 py-1.5 rounded-full active:scale-95">
+                  <div className="text-brand-600 font-bold text-sm">¥{d.price}</div>
+                  <button className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 font-semibold text-xs px-3 py-1.5 rounded-full active:scale-95">
                     问诊
                   </button>
                 </div>

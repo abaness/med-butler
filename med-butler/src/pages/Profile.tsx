@@ -25,21 +25,21 @@ export default function Profile() {
 
   return (
     <div className="pb-4">
-      <div className="bg-gradient-to-br from-brand-500 via-brand-600 to-orange-500 text-white px-4 pt-5 pb-12">
+      <div className="bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500 text-gray-900 px-4 pt-5 pb-12">
         <div className="flex items-center gap-3">
-          <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-3xl">
+          <div className="w-14 h-14 rounded-full bg-white/70 backdrop-blur flex items-center justify-center text-3xl shadow-sm">
             {me.avatar}
           </div>
           <div className="flex-1">
-            <div className="text-lg font-semibold">{me.name}</div>
-            <div className="text-xs opacity-90 mt-0.5">
+            <div className="text-lg font-bold">{me.name}</div>
+            <div className="text-xs text-gray-700 mt-0.5">
               {me.age}岁 · {me.diseases.join(' · ')}
             </div>
-            <div className="text-xs opacity-90 mt-0.5">
-              管家陪伴您第 <b>186</b> 天
+            <div className="text-xs text-gray-700 mt-0.5">
+              管家陪伴您第 <b className="text-gray-900">186</b> 天
             </div>
           </div>
-          <button onClick={() => nav('/family')} className="p-2 rounded-full bg-white/20">
+          <button onClick={() => nav('/family')} className="p-2 rounded-full bg-white/70 shadow-sm">
             <Users size={18} />
           </button>
         </div>
@@ -96,7 +96,7 @@ export default function Profile() {
               unit="mmol/L"
             />
           </div>
-          <button className="mt-3 w-full bg-brand-50 text-brand-700 rounded-xl py-2 text-sm font-medium active:scale-95">
+          <button className="mt-3 w-full bg-brand-50 text-brand-600 rounded-xl py-2 text-sm font-medium active:scale-95">
             + 录入今日数据
           </button>
         </div>
@@ -202,9 +202,10 @@ function Switch({ on, onToggle }: { on: boolean; onToggle: () => void }) {
     <button
       onClick={onToggle}
       className={cx(
-        'relative w-11 h-6 rounded-full transition',
-        on ? 'bg-brand-600' : 'bg-gray-200',
+        'toggle-switch relative w-11 h-6 rounded-full transition shrink-0',
+        on ? 'bg-gradient-to-br from-brand-300 via-brand-400 to-brand-500' : 'bg-gray-200',
       )}
+      aria-pressed={on}
     >
       <span
         className={cx(
