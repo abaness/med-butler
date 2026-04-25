@@ -4,18 +4,32 @@
 
 :root {
   color-scheme: light;
+  /* 美团暖色背景调色板 */
+  --mt-bg: #fff7ec;          /* 主背景 暖米白 */
+  --mt-card-shadow: 0 1px 2px rgba(255, 128, 0, 0.04), 0 4px 14px rgba(20, 20, 30, 0.05);
 }
 
 html, body, #root {
   height: 100%;
 }
 
-/* 全局默认字重上调：拒绝细体，提升可读性（标准模式和老人模式共享） */
+/* 美团字体栈：iOS PingFang → 鸿蒙 HarmonyOS Sans → 安卓系统 → 古早系统 兜底
+   数字优先 'DIN Alternate'（圆润感，与美团 App 一致） */
 body {
   margin: 0;
-  background: #f4f5f7;
-  font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', system-ui, -apple-system, sans-serif;
-  font-weight: 500;                 /* Medium：不再使用 400 细体 */
+  background: var(--mt-bg);
+  font-family:
+    'DIN Alternate',
+    'PingFang SC',
+    'HarmonyOS Sans SC',
+    'HarmonyOS Sans',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    'WenQuanYi Micro Hei',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-weight: 500;                 /* Medium：拒绝 400 细体 */
   color: #111827;                    /* 近纯黑正文，提升对比度 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -31,17 +45,16 @@ b, strong { font-weight: 700; }
 .text-gray-500 { color: #4b5563 !important; }
 .text-gray-600 { color: #374151 !important; }
 
-/* 滚动条 */
+/* 滚动条 · 美团暖色调 */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #f0d9b8; border-radius: 3px; }
 
 /* ============================================================
    老人模式：清爽版的标准产品，不是另一个产品
    · 结构/导航/模块位置 保持一致
    · 字号放大 15~25%（不超过 30%）
    · 字重略增强，但不强制全局 600
-   · 按钮从 40 → 52px，而非 72px
-   · 视觉增强 = 易读，不破坏布局
+   · 主按钮 40 → 52px，但不再波及 Switch / Tab / 头像等小按钮
 ============================================================ */
 .elder-mode {
   font-size: 17px;
@@ -60,16 +73,13 @@ b, strong { font-weight: 700; }
 .elder-mode .text-2xl      { font-size: 28px; }  /* 24 → 28 */
 .elder-mode .text-3xl      { font-size: 34px; }  /* 30 → 34 */
 
-/* 按钮适度增高（原 Tailwind py-1.5/py-2 的按钮会相应变高） */
-.elder-mode button {
-  min-height: 44px;
-  letter-spacing: 0.5px;
-}
-/* 主操作按钮（含 bg-brand-600、rounded-2xl/rounded-full 的大按钮）更大 */
+/* 仅主操作按钮加大；不再用 .elder-mode button{...} 全局规则
+   （之前那条规则把 Switch、Tab、头像按钮全撑变形了）*/
 .elder-mode .btn-primary,
 .elder-mode button.bg-brand-600 {
   min-height: 52px;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 /* 关键加粗：标题、b、strong */

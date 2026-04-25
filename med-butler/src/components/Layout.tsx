@@ -13,7 +13,7 @@ export default function Layout() {
   return (
     <div
       className={cx(
-        'min-h-screen mx-auto max-w-[440px] bg-gray-50 shadow-[0_0_40px_rgba(0,0,0,0.08)] relative',
+        'min-h-screen mx-auto max-w-[440px] bg-[#fff7ec] shadow-[0_0_40px_rgba(0,0,0,0.08)] relative',
         elderMode && 'elder-mode',
       )}
     >
