@@ -1,0 +1,6 @@
+{
+  "installCommand": "npm --prefix med-butler install",
+  "buildCommand": "npm --prefix med-butler run build",
+  "outputDirectory": "med-butler/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
